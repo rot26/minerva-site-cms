@@ -1,0 +1,77 @@
+extends ../layouts/default
+
+block content
+  .header(ng-class="{'regular': home}", ng-controller='NavCtrl')
+    .jumbotron.head-animate(ng-show='home', ng-controller='MainCtrl')
+      p.intro Weclome to
+      |         
+      h1.logo.text-hide Minerva Group, LLC
+      |         
+      h1 Design Develop Deliver
+    |       
+    .navbar.navbar-default(role='navigation')
+      .container
+        .navbar-header(ng-if='home')
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#js-navbar-collapse')
+            span.sr-only Toggle navigation
+            |              
+            span.icon-bar
+            |              
+            span.icon-bar
+            |              
+            span.icon-bar
+          |             
+          a.navbar-brand.logo.logo--menu.text-hide(href='/') Minerva Group, LLC
+        |             
+        #js-navbar-collapse(ng-class="{'collapse navbar-collapse': home}")
+          ul.nav.navbar-nav.text-center(ng-class="{'navbar-center panel': !home, 'navbar-right': home}")
+            li
+              a(href='/do') What We do
+            |                 
+            li
+              a(href='/venture') Venture Software
+            |                 
+            li
+              a(href='/team') Who We Are
+            |                 
+            li
+              a(href='/contact') Contact Us
+  |     
+  .container
+    div(ng-view='')
+  |     
+  .footer
+    .container.text-center
+      p.copyright Copyright Minerva Group, LLC 2015
+      |         
+      p
+        a(href='mailto:info@minerva.io') info@minerva.io
+        |  | 
+        a(href='tel:1-720-507-1241') 720.507.1241
+      |         
+      p
+        a.text-hide.social.social-facebook(href='https://www.facebook.com/minervaio')
+          | Facebook
+        |           
+        a.text-hide.social.social-twitter(href='https://twitter.com/minervaio')
+          | Twitter
+        |           
+        a.text-hide.social.social-linkedin(href='https://www.linkedin.com/company/minerva-group-llc')
+          | LinkedIn
+        |           
+        a.text-hide.social.social-github(href='https://github.com/Minervaio')
+          | GitHub
+  |     
+  .row
+    .container.text-center
+      #mc_embed_signup
+        form#mc-embedded-subscribe-form.text-center(action='//minerva.us10.list-manage.com/subscribe/post?u=0efaf6ade68b072a06e06b6ae&id=b30db135cd', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+          .mc-field-group.form-group
+            label.hidden(for='mce-EMAIL') Email Address
+            |             
+            input#mce-EMAIL.required.email.form-control(type='email', placeholder='Email', value='', name='EMAIL')
+          |             
+          div(style='position: absolute; left: -5000px;')
+            input(type='text', name='b_0efaf6ade68b072a06e06b6ae_b30db135cd', tabindex='-1', value='')
+          |             
+          input#mc-embedded-subscribe.btn.btn-default(type='submit', value='Subscribe', name='subscribe')
