@@ -1,5 +1,7 @@
 'use strict';
 
+require('bootstrap-loader');
+
 var angular = require('angular');
 
 /**
@@ -27,7 +29,7 @@ minervaioApp.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
-      controller: 'VentureCtrl'
+      controller: 'MainCtrl'
     })
     .when('/do', {
       templateUrl: 'views/do.html',
@@ -50,5 +52,13 @@ minervaioApp.config(function ($routeProvider, $locationProvider) {
 
 });
 
+//Register Services
+minervaioApp.service('team', require('./services/team'));
+
+//Register Controllers
+minervaioApp.controller('DoCtrl', require('./controllers/do'));
+minervaioApp.controller('VentureCtrl', require('./controllers/venture'));
+minervaioApp.controller('TeamCtrl', require('./controllers/team'));
+minervaioApp.controller('ContactCtrl', require('./controllers/contact'));
 minervaioApp.controller('MainCtrl', require('./controllers/main'));
 minervaioApp.controller('NavCtrl', require('./controllers/nav'));

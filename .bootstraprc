@@ -1,0 +1,8 @@
+{
+  "bootstrapVersion": 3,
+  "extractStyles": true,
+  "styles": true,
+  "scripts": true,
+  "styleLoaders": ["style", "css", "sass"],
+  "appStyles": "./public/styles/site.scss"
+}

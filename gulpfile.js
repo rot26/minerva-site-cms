@@ -25,11 +25,14 @@ gulp.task('scripts', function() {
   return gulp.src(webpackConfig.entry)
     .pipe($.webpack(webpackConfig))
     .pipe(isProduction ? $.uglifyjs() : $.util.noop())
-    .pipe(gulp.dest(dir + 'js/'))
-    .pipe($.size({ title : 'js' }))
+    .pipe(gulp.dest(dir + 'js/'));
+});
+
+gulp.task('watch:scripts', ['scripts'], function() {
+  return gulp.watch(paths.client, ['scripts']);
 });
 
 gulp.task('runKeystone', shell.task('node keystone.js'));
 
 
-gulp.task('default', ['runKeystone']);
+gulp.task('default', ['runKeystone', 'watch:scripts']);

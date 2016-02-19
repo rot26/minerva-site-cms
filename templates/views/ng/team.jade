@@ -1,34 +1,34 @@
 .text-center.page-header
-    h1 Who We Are
-    .row
-      .container
-        p
-          | Our team provides virtual CTOs that specialize in creating both back-end and front-end applications that scale. Our team has worked on a wide range of enterprise applications. It is our mission to bring that expertise to companies looking to expand. Whether you are looking to go from one thousand customers to one million, or get your technology to a state where your company can be funded, Minerva can help.
-        |     
-        p
-          | We take a modular approach to development that ensures maximum flexibility for our clients. By breaking large applications into smaller pieces, it allows for faster development and better use of distributed teams. We implement a service-oriented architecture in order to achieve this.
-        |     
-        p
-          | In addition to building your application, our virtual CTOs will partner with your leadership in order to help guide them in building a successful digital strategy. This is done by using proven agile project management and architecting maintainable code. We utilize the best practices across your organization.
-    .text-center.page-header
-      h1 Meet The Team
-    .row(ng-if='!section.hide', ng-repeat='section in team')
-      h1 {{ section.type }}
-      |   
-      .media(ng-if='!person.hide', ng-repeat='person in section.people')
-        .media-left
-          a(href='person.url')
-            img(src='people/{{ person.img}}', alt='{{ person.name }}', height='100', width='100')
-        |     
-        .media-body
-          h4.media-heading {{ person.name }}
-          |       
-          p(ng-if='person.company')
-            | Company: 
-            a(ng-href='{{person.url}}') {{ person.company }}
-          |       
-          p(ng-if='(!person.company && person.url)')
-            | Personal Site: 
-            a(ng-href='{{person.url}}') {{ person.url }}
-          |       
-          p {{ person.description }}
+  h1 Who We Are
+.row
+  .container
+    p
+      | Our team provides virtual CTOs that specialize in creating both back-end and front-end applications that scale. Our team has worked on a wide range of enterprise applications. It is our mission to bring that expertise to companies looking to expand. Whether you are looking to go from one thousand customers to one million, or get your technology to a state where your company can be funded, Minerva can help.
+    |     
+    p
+      | We take a modular approach to development that ensures maximum flexibility for our clients. By breaking large applications into smaller pieces, it allows for faster development and better use of distributed teams. We implement a service-oriented architecture in order to achieve this.
+    |     
+    p
+      | In addition to building your application, our virtual CTOs will partner with your leadership in order to help guide them in building a successful digital strategy. This is done by using proven agile project management and architecting maintainable code. We utilize the best practices across your organization.
+.text-center.page-header
+  h1 Meet The Team
+.row(ng-if='!section.hide', ng-repeat='section in team')
+  h1 {{ section.type }}
+  |   
+  .media(ng-if='!person.hide', ng-repeat='person in section.people')
+    .media-left
+      a(href='person.url')
+        img(src='people/{{ person.img}}', alt='{{ person.name }}', height='100', width='100')
+    |     
+    .media-body
+      h4.media-heading {{ person.name }}
+      |       
+      p(ng-if='person.company')
+        | Company: 
+        a(ng-href='{{person.url}}') {{ person.company }}
+      |       
+      p(ng-if='(!person.company && person.url)')
+        | Personal Site: 
+        a(ng-href='{{person.url}}') {{ person.url }}
+      |       
+      p {{ person.description }}

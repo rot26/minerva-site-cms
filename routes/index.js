@@ -16,10 +16,13 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/do', routes.views.index);
+	app.get('/venture', routes.views.index);
+	app.get('/team', routes.views.index);
+	app.get('/contact', routes.views.index);
 	app.get('/views/:viewFile.html', routes.views.view);
-	app.get('/blog/:category?', routes.views.blog);
-	app.get('/blog/post/:post', routes.views.post);
-	app.all('/contact', routes.views.contact);
-	app.get('/*', routes.views.index);
+	//app.get('/blog/:category?', routes.views.blog);
+	//app.get('/blog/post/:post', routes.views.post);
+	//app.all('/contact', routes.views.contact);
 
 };
