@@ -13,6 +13,8 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
+	
+	app.use(require('prerender-node').set('prerenderToken', 'bdHXmmLaAu5t2R018duW'));
 
 	// Views
 	app.get('/', routes.views.index);
