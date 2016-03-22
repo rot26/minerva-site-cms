@@ -12,8 +12,8 @@ var entry = [
 
 module.exports.development = {
     debug : false,
-    devtool : 'eval',
     entry: entry,
+    production: true,
     output: output,
     plugins: [
       extractCSS
