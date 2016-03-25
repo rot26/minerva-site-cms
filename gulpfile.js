@@ -34,5 +34,6 @@ gulp.task('watch:scripts', ['scripts'], function() {
 
 gulp.task('runKeystone', shell.task('node keystone.js'));
 
+gulp.task('build', ['runKeystone', 'scripts']);
 
 gulp.task('default', ['runKeystone', 'watch:scripts']);
