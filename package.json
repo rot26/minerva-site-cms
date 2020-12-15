@@ -27,7 +27,7 @@
     "gulp-util": "^3.0.7",
     "gulp-webpack": "^1.5.0",
     "imports-loader": "^0.6.5",
-    "install": "^0.4.2",
+    "install": "^0.13.0",
     "jquery": "^2.2.0",
     "keystone": "^0.3.14",
     "node-sass": "^3.4.2",
