@@ -18,7 +18,7 @@
     "bootstrap-loader": "^1.0.8",
     "bootstrap-sass": "^3.3.6",
     "bootstrap-sass-webpack": "0.0.3",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.28.11",
     "dotenv": "^1.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
